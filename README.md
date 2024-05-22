@@ -1,60 +1,23 @@
-# pizza-store-demo
+# Pizza demo project for component testing
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a demo project to show how to compare different component testing frameworks. The frameworks that are compared are:
 
-## Recommended IDE Setup
+- [Vitest](https://vitest.io)
+- [Playwright](https://playwright.dev/docs/test-components)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The demo project is a simple pizza ordering Vue application, designed for my talk **"We may not need component (unit) testing"**.
 
-## Customize configuration
+## Talk slides
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The slides for the talk can be found [here](https://drive.google.com/file/d/12yw7fdbI2oat_M-fWcPWKxlW9B-pbBxq/view?usp=sharing).
 
-## Project Setup
+## How to run the project
 
-```sh
-npm install
-```
+1. Clone the project
+2. Run `yarn`
+3. Run unit tests by Vitest: `yarn test:unit`
+4. Run component tests by Playwright with UI: `yarn test-ct`
 
-### Compile and Hot-Reload for Development
+## Other resources
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chromium
-npm run test:e2e -- --project=chromium
-# Runs the tests of a specific file
-npm run test:e2e -- tests/example.spec.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- [Pizza store project in React](https://github.com/mayashavin/pizza-store-demo-react)

@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBox component > should match snapshot 1`] = `
+"<label for="searchbox">Search</label>
+<input placeholder="Search for a pizza" data-testid="search-input" id="searchbox">"
+`;

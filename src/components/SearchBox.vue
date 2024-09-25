@@ -15,7 +15,6 @@ const props = defineProps({
   },
   items: {
     type: Array,
-    required: true,
     default: () => []
   }
 });
@@ -23,7 +22,7 @@ const props = defineProps({
 const emits = defineEmits(['update-items']);
 
 // const route: RouteLocationNormalizedLoaded = useRoute();
-const router = useRouter();
+// const router = useRouter();
 
 const { search, searchResults } = useSearch({
   items: props.items,
@@ -32,7 +31,7 @@ const { search, searchResults } = useSearch({
 
 watch(search, (value, prevValue) => {
   if (value === prevValue) return;
-  router.replace({ query: { search: value } });
+  // router.replace({ query: { search: value } });
   emits('update-items', searchResults.value)
 }, {
     immediate: true

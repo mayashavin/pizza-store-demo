@@ -11,25 +11,32 @@
     "test:e2e": "playwright test",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "test-ct": "playwright test -c playwright-ct.config.js"
+    "test-ct": "playwright test -c playwright-ct.config.js",
+    "coverage": "vitest --environment jsdom --root src/ --coverage --run",
+    "test:browser": "vitest --workspace=vitest.workspace.js",
+    "test:browser-coverage": "vitest --environment jsdom --root src/ --coverage --run --workspace=vitest.workspace.js"
   },
   "dependencies": {
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@playwright/experimental-ct-vue": "^1.41.1",
-    "@playwright/test": "^1.40.1",
+    "@playwright/experimental-ct-vue": "^1.47.2",
+    "@playwright/test": "^1.47.2",
     "@rushstack/eslint-patch": "^1.3.3",
     "@types/node": "^20.11.6",
     "@vitejs/plugin-vue": "^4.5.2",
+    "@vitest/browser": "^2.1.1",
+    "@vitest/coverage-istanbul": "^2.1.1",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/test-utils": "^2.4.3",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^23.0.1",
+    "playwright": "^1.47.2",
     "prettier": "^3.0.3",
     "vite": "^5.0.10",
-    "vitest": "^1.0.4"
+    "vitest": "^2.1.1",
+    "vitest-browser-vue": "^0.0.1"
   }
 }

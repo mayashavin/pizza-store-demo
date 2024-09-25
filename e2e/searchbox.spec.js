@@ -16,6 +16,9 @@ test('should update the search term to query params', async ({ mount, page }) =>
 
     const elem = await component.locator('#searchbox');
 
+    await component.screenshot({ path: 'e2e/screenshots/searchbox_default_full.png', fullPage: true });
+    await page.screenshot({ path: 'e2e/screenshots/searchbox_page.png', fullPage: true });
+
     await elem.fill('hello')
 
     await expect(elem).toHaveValue('hello')

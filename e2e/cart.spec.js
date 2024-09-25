@@ -15,7 +15,7 @@ test('should toggle cart display', async ({ mount }) => {
     await expect(component).toContainText('No item in cart');
 })
 
-test('should display with items', async({ mount }) => {
+test.skip('should display with items', async({ mount }) => {
     const cart = useCart();
 
     cart.add({

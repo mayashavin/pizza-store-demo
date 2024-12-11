@@ -38,3 +38,8 @@ watch(search, (value, prevValue) => {
     immediate: true
 });
 </script>
+<style>
+#searchbox {
+  color: red;
+}
+</style>

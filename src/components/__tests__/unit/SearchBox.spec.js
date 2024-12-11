@@ -54,4 +54,18 @@ describe("SearchBox component", () => {
 
         console.log(router.currentRoute);
     })
+
+    it('should match snapshot', () => {
+        const wrapper = mount(SearchBox, {
+            props: {
+                searchTerm: "",
+                items: []
+            },
+            global: {
+                plugins: [router]
+            }
+        });
+
+        expect(wrapper).toMatchSnapshot();
+    })
 })
